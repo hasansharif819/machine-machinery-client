@@ -1,0 +1,44 @@
+.productID{
+    background-image: url('https://i.ibb.co/tMYnD9G/b1.jpg');
+    background-size: cover;
+}
+
+#product :hover{
+    transition: all 3s ease;
+      transform: scale(1.2);
+      overflow: hidden;
+}
+
+#productBody{
+    /* background-color: darkgrey; */
+}
+/* 
+#inventory button{
+    display: none;
+}
+#inventory button:hover{
+    display: inline-flex;
+    background-color: aqua;
+} */
+
+#img1{
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 400px) {
+    #inventory{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 401) and (max-width: 800px) {
+    #inventory{
+        width: 100%;
+        margin-left: 0;
+    }
+    #img1{
+        width: 90%;
+        overflow: hidden;
+    }
+}

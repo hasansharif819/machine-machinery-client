@@ -1,0 +1,69 @@
+.outside{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.large{
+    overflow: hidden;
+    background-color: aqua;
+    border-radius: 20px;
+    background-image: url('/src/assets/Banner/b2.jpg');
+
+}
+
+.inner1{
+    height: 500px;
+    /* width: 70%; */
+    border: 2px solid red;
+    margin-right: 10px;
+}
+
+.small{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 10;
+}
+
+.inner2{
+    border: 2px solid blue;
+    height: 200px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.inner3{
+    border: 2px solid blue;
+    height: 190px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.inner4{
+    border: 2px solid blue;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.inner2:hover{
+    transition: all 3s ease;
+    transform: scale(1.2);
+  overflow: hidden;
+}
+.inner3:hover{
+    transition: all 3s ease;
+    transform: scale(1.2);
+  overflow: hidden;
+}
+.inner4:hover{
+    transition: all 3s ease;
+    transform: scale(1.2);
+  overflow: hidden;
+}
+
+#buttonID{
+    box-shadow: 5px 10px orangered purple;
+}

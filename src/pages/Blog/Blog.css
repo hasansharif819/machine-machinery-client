@@ -1,0 +1,73 @@
+.outerBlog{
+    height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid red;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    grid-gap: 20px;
+    /* background-image: url('https://i.ibb.co/wcjSQ6c/chilly1.webp'); */
+}
+
+.inner11 img{
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inner22{
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inner33{
+    height: 290px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    color: antiquewhite;
+}
+
+#comment_user{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#comment img{
+   border-radius: 50%;
+}
+#comment{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 400px) {
+    .outer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .inner11 img{
+        width: 100%;
+    }
+    .inner22{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 800px) {
+    .outer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .inner11 img{
+        width: 100%;
+    }
+    .inner22{
+        width: 100%;
+        justify-content: center
+    }
+}

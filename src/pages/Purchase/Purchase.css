@@ -1,0 +1,60 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.content1{
+    border: 1px solid red;
+    height: 80vh;
+}
+.content2{
+    border: 1px solid blue;
+    height: 80vh;
+    overflow: hidden;
+    /* margin-top: 100px; */
+}
+
+.content1L{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.content1LargeImage{
+    height: 80%;
+    width: 100%;
+}
+.content1LargeImage img{
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content1Small{
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    overflow: hidden;
+}
+
+#counterID{
+    border: 1px solid rgb(247, 85, 85);
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+
+#counterID button{
+    height: 20px;
+    width: 20px;
+}

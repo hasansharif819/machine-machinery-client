@@ -1,0 +1,39 @@
+.cover-photo img{
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    border-radius: 10px;
+}
+.profile-photo img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 150px;
+    margin-top: -40px;
+    border: 5px solid wheat;
+}
+.camera-icon img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 320px;
+    margin-top: -100px;
+}
+.user-profile{
+    margin-top: -70px;
+    margin-left: -200px;
+}
+/* .edit-profile button{
+    font-weight: 700;
+    
+} */
+/* .btn-class{
+    font-weight: 700;
+    margin-left: 800px;
+    margin-bottom: 100px;
+     margin-top: -8000px;
+} */
+
+.your-profile{
+    border: 2px solid gray;
+}

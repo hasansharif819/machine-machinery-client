@@ -1,0 +1,137 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.OutsideCard
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+
+.OutsideCard ::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%); */
+}
+.OutsideCard ::after
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%); */
+}
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+/* .container  */
+.cardBody
+{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/* .container .card  */
+.content
+{
+    padding: 20px;
+    text-align: center;
+    /* transform: translateY(100px); */
+    /* opacity: 0; */
+    transition: 0.5s;
+}
+
+.cardBody img
+{
+    height: 200px;
+    width: max-content;
+}
+
+.cardBody:hover {
+    transform: translateY(0);
+    opacity: 1;
+    /* background-color: red; */
+}
+
+/* .container  */
+/* .card:hover
+{
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+/* .container .card  */
+.content h2
+{
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    font-size: 8em;
+    color: whitesmoke;
+}
+
+/* .container .card  */
+.content h3
+{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+/* .container .card  */
+.content p
+{
+    font-size: 1em;
+    font-weight: 300;
+    color: #fff;
+}
+
+.container .cardBody .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 150x rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "_id": 1,
+        "name": "ENGINE",
+        "price": 2000,
+        "quantity": 140,
+        "description": " a machine for converting any of various forms of energy into mechanical force and motion also : a mechanism or object that serves as an energy source black holes may be the engines for quasars. a railroad locomotive.",
+        "img": "https://i.ibb.co/1TJqBJB/b2.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "TIRE",
+        "price": 400,
+        "quantity": 154,
+        "description": "A tire (American English) or tyre (British English) is a ring-shaped component that surrounds a wheel's rim to transfer a vehicle's load from the axle through the wheel to the ground and to provide traction on the surface over which the wheel travels.",
+        "img": "https://i.ibb.co/GVqgqv5/b3.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "CAMERA",
+        "price": 1000,
+        "quantity": 504,
+        "description": "A digital single-lens reflex camera (digital SLR or DSLR) is a digital camera that combines the optics and the mechanisms of a single-lens reflex camera with a digital imaging sensor.",
+        "img": "https://i.ibb.co/tMYnD9G/b1.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "SEMI CONDUCTOR",
+        "price": 300,
+        "quantity": 498,
+        "description": "A semiconductor is a substance that has specific electrical properties that enable it to serve as a foundation for computers and other electronic devices. It is typically a solid chemical element or compound that conducts electricity under certain conditions but not others.",
+        "img": "https://i.ibb.co/M1xrtrP/b4.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "PROCESSOR",
+        "price": 340,
+        "quantity": 540,
+        "description": "A processor (CPU) is the logic circuitry that responds to and processes the basic instructions that drive a computer. The CPU is seen as the main and most crucial integrated circuitry (IC) chip in a computer, as it is responsible for interpreting most of computers commands.",
+        "img": "https://i.ibb.co/55f4hL1/b6.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "SWING",
+        "price": 630,
+        "quantity": 432,
+        "description": "A sewing machine is a mechanical (or electrical) device that joins fabric using thread, in a manner similar to manual sewing. Sewing machines make a stitch, called a sewing-machine stitch, usually using two threads although machines exist that stitch using one, three, four or more threads.",
+        "img": "https://i.ibb.co/N9xqTd4/b7.jpg"
+    }
+]
