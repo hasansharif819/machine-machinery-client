@@ -45,13 +45,19 @@ const Header = () => {
                         </ul>
                     </div>
                     {/* <img height={40} width={40} src="https://i.ibb.co/wcjSQ6c/chilly1.webp" alt="" /> */}
-                    <Link to='/' className='text-2xl'>MACHINE & MACHINERY</Link>
+                    <Link to='/' className='text-2xl'>HELLO TOOLS</Link>
                 </div>
                 <div className='navbar-center hidden lg:flex'>
                     <ul className="menu menu-horizontal p-0">
                         {menu}
                     </ul>
                 </div>
+
+                <div className="navbar-end">
+                <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+            </div>
 
                 <div className="navbar-end">
                 {user && 
@@ -114,11 +120,6 @@ const Header = () => {
                     </div>
                 }
 </div>
-            </div>
-            <div className="navbar-end">
-                <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ const AddProducts = () => {
     const {register, formState: { errors },reset, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
     const email = user?.email;
-    const imageStorageKey = '4fb1911cd7fea07ca539c23c89d490db';
+    const imageStorageKey = '4ad68ff514683e871176497c797af064';
 
     const onSubmit = async data => {
         const image = data.image[0];

@@ -31,6 +31,13 @@
     #inventory{
         width: 100%;
     }
+    /* #inventoryImage {
+        max-width: 200px;
+        overflow: hidden;
+    } */
+    .cardBody{
+        max-width: 300px;
+    }
 }
 @media only screen and (min-width: 401) and (max-width: 800px) {
     #inventory{

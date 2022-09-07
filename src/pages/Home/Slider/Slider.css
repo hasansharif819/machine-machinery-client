@@ -9,8 +9,15 @@
     overflow: hidden;
     background-color: aqua;
     border-radius: 20px;
-    background-image: url('/src/assets/Banner/b2.jpg');
+    background-image: url('/src/assets/Banner/b6.jpg');
+    background-size: cover;
+}
 
+#imgID:hover{
+    transition: all 5s ease;
+    transform: scale(1.2);
+    transform: skew(180deg);
+    overflow: hidden;
 }
 
 .inner1{
@@ -67,3 +74,97 @@
 #buttonID{
     box-shadow: 5px 10px orangered purple;
 }
+
+@media only screen and (max-width: 400px) {
+    .outside {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 2px solid red;
+    }
+    .large{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        overflow: hidden;
+        height: 50vh;
+    }
+    .large img {
+        max-width: 100%;
+        max-height: fit-content;
+        /* display: none; */
+      }
+
+    .small{
+        display: flex;
+        flex-direction: column;
+    }
+    .large:hover{
+        transition: all 3s ease;
+        transform: scale(1.2);
+      overflow: hidden;
+  }
+  .inner1:hover{
+    transition: all 3s ease;
+    transform: scale(1.2);
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+.inner2:hover{
+    transition: all 3s ease;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+.inner3:hover{
+    transition: all 3s ease;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+  }
+
+  @media only screen and (min-width: 401px) and (max-width: 800px) {
+    .outside {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border: 2px solid red;
+      }
+      .large{
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+          overflow: hidden;
+          height: 50vh;
+      }
+      .large img {
+          max-width: 100%;
+          max-height: fit-content;
+          /* display: none; */
+        }
+  
+      .small{
+          display: flex;
+          flex-direction: column;
+      }
+      .large:hover{
+          transition: all 3s ease;
+          transform: scale(1.2);
+        overflow: hidden;
+    }
+    .inner1:hover{
+      transition: all 3s ease;
+      transform: scale(1.2);
+      transform-style: preserve-3d;
+      overflow: hidden;
+  }
+  .inner2:hover{
+      transition: all 3s ease;
+      transform: scale(1.2);
+      overflow: hidden;
+  }
+  .inner3:hover{
+      transition: all 3s ease;
+      transform: scale(1.2);
+      overflow: hidden;
+  }
+  }

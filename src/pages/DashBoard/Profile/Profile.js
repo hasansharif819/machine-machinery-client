@@ -8,13 +8,12 @@ import './Profile.css';
 import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading/Loading';
 import { Link } from 'react-router-dom';
-import UserProfile from './UserProfile';
 
 const Profile = () => {
   const [user] = useAuthState(auth);
   const email = user?.email;
 
-  const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/profile?email=${email}`).then(res => res.json()))
+  const { data: users, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/profile?email=${email}`).then(res => res.json()))
   if (isLoading) {
     return <Loading />
   }
@@ -43,7 +42,7 @@ const Profile = () => {
         <h2 className='taxt-xl pt-2'>Gender: {users?.gender}</h2>
         <h2 className='taxt-xl pt-2'>Age: {users?.age}</h2>
         <h2 className='taxt-xl pt-2'>Degree: {users?.education}</h2>
-        <Link to='/updateprofile'><button className='btn my-3'>Edit profile</button>
+        <Link to='/updateprofile'><button className='btn my-3 bg-gradient-to-r from-orange-500 to-red-400'>Edit profile</button>
       </Link>
       </div>
       

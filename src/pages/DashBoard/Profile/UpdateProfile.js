@@ -275,7 +275,7 @@ console.log(image)
                         {...register('image2')}
                     />
                 </div>
-                <input type="submit" value="UPDATE" className='btn bg-green-800 btn-sm' />
+                <input type="submit" value="UPDATE" className='btn bg-green-800 btn-sm ' />
             </form>
         </div>
 

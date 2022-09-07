@@ -11,8 +11,8 @@ const BannerProduct = ({ product }) => {
     }
 
     return (
-        <div className="card w-96 glass">
-  <figure>
+        <div className="card w-96 glass cardBody">
+  <figure id='inventoryImage'>
     <img id='img1' src={img} alt="" />
     </figure>
     <div className="card-body items-center text-center" id='productBody'>
@@ -20,7 +20,7 @@ const BannerProduct = ({ product }) => {
     <h2 className="card-title text-red-800">Price: ${price}</h2>
     <h2 className="card-title text-green-500">Available: {quantity}</h2>
     <div className="card-actions">
-      <Link to={`/products/${_id}`}><button onClick={() => navigateToDetail(_id)} className="btn bg-red-900 btn-sm" id='buttonID'>PURCHASE</button></Link>
+      <Link to={`/products/${_id}`}><button onClick={() => navigateToDetail(_id)} className="btn bg-red-900 btn-sm bg-gradient-to-r from-orange-500 to-red-400" id='buttonID'>PURCHASE</button></Link>
     </div>
   </div>
 </div>
