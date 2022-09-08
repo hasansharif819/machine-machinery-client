@@ -16,7 +16,7 @@ const Slider = () => {
             <div className="hero min-h-screen large">
 <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={b9} className="rounded-lg shadow-2xl" alt='' id='imgID'/>
+                <img src={b9} className="rounded-lg shadow-2xl" alt='' id='largeImage'/>
                 <div className='text-white'>
                     <h1 className="text-5xl font-bold">HELLO TOOLS</h1>
                     <p className="py-6">We provide different types of tools and products all over the world with 100% qualityfull for wholesell</p>

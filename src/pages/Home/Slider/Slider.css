@@ -10,10 +10,15 @@
     background-color: aqua;
     border-radius: 20px;
     background-image: url('/src/assets/Banner/b6.jpg');
-    background-size: cover;
+    /* background-size: cover; */
 }
 
-#imgID:hover{
+#largeImage{
+    height: 50%;
+    width: 50%;
+}
+
+#largeImage:hover{
     transition: all 5s ease;
     transform: scale(1.2);
     transform: skew(180deg);
@@ -92,8 +97,8 @@
     .large img {
         max-width: 100%;
         max-height: fit-content;
-        /* display: none; */
-      }
+         /* display: none; */
+       }
 
     .small{
         display: flex;

@@ -7,7 +7,8 @@ import { signOut } from 'firebase/auth';
 import { useQuery } from 'react-query';
 import Loading from '../Loading/Loading';
 import useAdmin from '../../../hooks/useAdmin';
-
+import b9 from '../../../assets/Banner/b9.jpg';
+ 
 const Header = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
@@ -44,7 +45,7 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
-                    {/* <img height={40} width={40} src="https://i.ibb.co/wcjSQ6c/chilly1.webp" alt="" /> */}
+                    <img height={40} width={40} src={b9} alt=""  className='rounded mr-3'/>
                     <Link to='/' className='text-2xl'>HELLO TOOLS</Link>
                 </div>
                 <div className='navbar-center hidden lg:flex'>
