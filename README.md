@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Hello Tools
+# https://hello-tools-4fde3.web.app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# server side: https://github.com/hasansharif819/machine-machinery-server
 
-## Available Scripts
+# Admin Credential
+## sharif.hasan.shuvro819@gmail.com
+## pass: 123456
 
-In the project directory, you can run:
+* Full Stack website based on diffenrent types of tools
+* Firebase validation and verification used for authentication
+* Email-password, Google and Facebook login system
+* Using firebase hooks, react hooks form, axios, react query.
+* Fully responsive
 
-### `npm start`
+* Creating responsive navbar. Name and logo. Home button, product, Manage products, Blog, Contact us, User profile with profile picture.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Purchase page, here clients can order or add to cart their products and can update their needing quantity.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Payments gateway where after order clients could be pay for that products using credit card.(stripe)
 
-### `npm test`
+* Admin panel, Admin see all users, products, manage products, add product, manage order etc.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* user or admin can edit their profile.
 
-### `npm run build`
+* Home page is start with a banner which is made with vanilla css. Transition and transform are used for image scaling, rotate and skewing
+* Bottom the banner here atasted products which are loads from server side and there only used 6 items. Each item have update button which triggered then it will go exact id of that items. Then it could be updated like restoke that is update with the databases. Also triggered delivery then it reduces stock by 1.
+* Our client say is another part of the homepase where used the users opinion as sliding
+* Our blogs is another part of homepage. Here some blogs images are setup for sliding with skew using transition transform
+* Business summary, here showing companies clients, different countries, tools, revenue etc.
+* Our top selling products section which is moving different image using vanilla css
+* Finally Footer is available for all the pages. There some description about website
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* product page loads all spices from data bases in diffent way that is load data as page. Skip data which are not relate to this page. And also it will works with limit of size. Here also use update button for updating the stock 
+* Manage spice, All the data loads from databases and display all them with a tabular format. And using a delete icon remove any item from databases.
+* Blog, in this page, its structures are done by vanilla css. Data are load from databases. Here amazing part is that here user can make comment and their comment is just upload databases then then display on comment with users profile picture and name like facebook
+* Contact us, is another route which is set up for users query about our site. User can send message then it hit on the databases and showing only the admin 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* In User profile, here user can add new items, add new blogs, users own item.
+* If user has a admin role then he can contribute the users message section which is users message from contact us section
+* Also if he/she has admin role, then he seen all the users who are logedin and admin has a power or make admin and remove any user
