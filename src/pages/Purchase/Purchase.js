@@ -115,7 +115,6 @@ const Purchase = () => {
     const total = parseInt(count * product.price);
     return (
         <div>
-            <h2>{product.name}</h2>
             <div className='container'>
                 <div className='content1'>
                     <div className='content1L'>
