@@ -117,7 +117,7 @@ const CheckoutForm = ({ payment }) => {
                     }}
                 />
                 {/* <button className='btn btn-success btn-sm mt-4' type="submit" disabled={!stripe || !clientSecret || success}> */}
-                <button className='btn btn-success btn-sm mt-4' type="submit" disabled={!stripe }>
+                <button className='btn btn-success btn-sm mt-4 bg-gradient-to-r from-orange-500 to-red-400' type="submit" disabled={!stripe }>
                     Pay
                 </button>
             </form>
@@ -127,7 +127,7 @@ const CheckoutForm = ({ payment }) => {
             {
                 success && <div className='text-green-500'>
                     <p>{success}  </p>
-                    <p>Transaction-Id: <span className="text-orange-500 font-bold">{transactionId}</span> </p>
+                    <p><span className="text-orange-500 font-bold">{transactionId}</span> </p>
                 </div>
             }
         </>

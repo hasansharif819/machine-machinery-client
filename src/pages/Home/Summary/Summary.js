@@ -10,8 +10,8 @@ import './Summary.css';
 const Summary = () => {
     return (
         <div className='bg-base-300 py-5 mt-5'>
-            <h2 className='text-4xl font-bold mx-5 text-red-800 my-5'>Machine & Machinery</h2>
-            <h2 className='text-4xl font-bold mx-5 text-red-800 my-5'>Our Company Business Summary</h2>
+            <h2 className='text-4xl font-bold mx-5 text-orange-400 my-5'>HELLO TOOLS</h2>
+            <h2 className='text-4xl font-bold mx-5 text-orange-400 my-5'>Company Business Summary</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-5'>
             <div className="cardBody w-96 bg-base-100 shadow-xl">
             <figure><img src={summary3} alt="" /></figure>

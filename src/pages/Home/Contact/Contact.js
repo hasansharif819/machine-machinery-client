@@ -37,7 +37,7 @@ const Contact = () => {
             <div className="hero-content flex-col lg:flex-row" id='imageID'>
                 <img src="https://i.ibb.co/N2Rpy4K/rquery2.webp" className="max-w-sm rounded-lg shadow-2xl" alt='' />
                 <div>
-                <h2 className='text-center text-5xl font-bold text-purple-500'>Get In Touch With Us</h2>
+                <h2 className='text-center text-5xl font-bold text-orange-400'>Get In Touch With Us</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}
                         className='grid grid-cols-1 justify-items-center py-5'>

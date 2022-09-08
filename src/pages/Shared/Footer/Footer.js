@@ -3,15 +3,15 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 text-white" id='footer'>
+        <footer className="footer p-10 text-orange-400 " id='footer'>
           <div>
-            <h2 className='text-2xl font-bold text-white'>MACHINE & MACHINERY</h2>
-            <p className=' font-semibold text-start'>We provide different types of Tools all over the world. All of our tools are invented by our experienced engineer. We always try to maintain the best quality of every tool</p>
+            <h2 className='text-2xl font-bold text-start text-orange-400'>HELLO TOOLS</h2>
+            <p className=' font-semibold text-start text-orange-400'>We provide different types of Tools all over the world. All of our tools are invented by our experienced engineer. We always try to maintain the best quality of every tool</p>
           </div>
   <div>
     <span className="footer-title">Services</span> 
-    <a className="link link-hover">Machine</a> 
-    <a className="link link-hover">Machinery</a> 
+    <a className="link link-hover">Tools</a> 
+    <a className="link link-hover">Products</a> 
     <a className="link link-hover">Selling</a> 
     <a className="link link-hover">Marketing</a> 
     <a className="link link-hover">Export</a> 
@@ -31,14 +31,14 @@ const Footer = () => {
     <a className="link link-hover">Cookie policy</a>
   </div> 
   <div>
-    <span className="footer-title">MACHINE & MACHINERY</span> 
+    <span className="footer-title">HELLO TOOLS</span> 
     <div className="form-control w-80">
       <label className="label">
-        <span className="label-text text-red-50">Enter your email address</span>
+        <span className="label-text text-orange-400">Enter your email address</span>
       </label> 
       <div className="relative">
         <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+        <button className="btn bg-orange-400 absolute top-0 right-0 rounded-l-none">Subscribe</button>
       </div>
     </div>
     <div className="grid grid-flow-col gap-4">
@@ -47,7 +47,7 @@ const Footer = () => {
       <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
     </div>
     <div>
-    <p>Copyright © 2022 - All right reserved by MACHINE & MACHINERY Authority</p>
+    <p>Copyright © 2022 - All right reserved by HELLO TOOLS Authority</p>
   </div>
   </div>
 </footer>
