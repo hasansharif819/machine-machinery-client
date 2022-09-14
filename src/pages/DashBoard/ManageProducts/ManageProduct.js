@@ -4,7 +4,7 @@ const ManageProduct = ({ product, refetch, index }) => {
     const { name, price, quantity, img, email} = product;
 
     const deleteItem = _id => {
-        console.log('deleted', _id);
+        // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
           const url = `https://serene-sea-89981.herokuapp.com/product/${product?._id}`;
@@ -15,6 +15,7 @@ const ManageProduct = ({ product, refetch, index }) => {
           .then(data => {
             console.log(data)
             if(data.deletedCount > 0){
+              // console.log('deleted', data)
               refetch();
             }
           })

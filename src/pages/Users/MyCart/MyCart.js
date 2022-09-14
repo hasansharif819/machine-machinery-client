@@ -10,16 +10,17 @@ const MyCart = ({ cart, index, refetch}) => {
     const [user] = useAuthState(auth);
 
     const deleteItem = _id => {
-        console.log('deleted', _id);
+        // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `https://serene-sea-89981.herokuapp.com/order/${cart?._id}`;
+          const url = `https://serene-sea-89981.herokuapp.com/cart/${cart?._id}`;
           fetch(url, {
             method: "DELETE"
           })
           .then(res => res.json())
           .then(data => {
             if(data.deletedCount > 0){
+              // console.log('delete', data)
               refetch();
             }
           })
@@ -27,38 +28,6 @@ const MyCart = ({ cart, index, refetch}) => {
     }
 
     const total = parseInt(price * pQuantity);
-
-    // buy now 
-    // const buyNow = () => {
-    //     if(user){
-    //         const order = {
-    //             name: user.displayName,
-    //             email: user.email,
-    //             pQuantity: pQuantity,
-    //             productID: cart._id,
-    //             productName: productName,
-    //             price: price,
-    //             quantity: cart.quantity,
-    //             description: cart.description,
-    //             img: img
-    //         }
-    //     const url = `https://serene-sea-89981.herokuapp.com/order`;
-    //     fetch(url, {
-    //         method: "POST",
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(order)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         // console.log('order from cart',data)
-    //         if(data.success === true){
-    //             toast('Your order is successfull')
-    //         }
-    //     })
-    // }
-    // }
 
     return (
         <tr>
