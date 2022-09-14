@@ -19,7 +19,7 @@ const MyReview = () => {
             ratings: data.ratings,
             review: data.review,
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://serene-sea-89981.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

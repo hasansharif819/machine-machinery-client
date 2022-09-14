@@ -13,7 +13,7 @@ const MyCart = ({ cart, index, refetch}) => {
         console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `http://localhost:5000/order/${cart?._id}`;
+          const url = `https://serene-sea-89981.herokuapp.com/order/${cart?._id}`;
           fetch(url, {
             method: "DELETE"
           })
@@ -42,7 +42,7 @@ const MyCart = ({ cart, index, refetch}) => {
     //             description: cart.description,
     //             img: img
     //         }
-    //     const url = `http://localhost:5000/order`;
+    //     const url = `https://serene-sea-89981.herokuapp.com/order`;
     //     fetch(url, {
     //         method: "POST",
     //         headers: {

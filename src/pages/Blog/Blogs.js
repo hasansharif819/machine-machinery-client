@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading/Loading';
 import Blog from './Blog';
 
 const Blogs = () => {
-    const {data: blogs, isLoading, refetch} = useQuery('blogs', () => fetch('http://localhost:5000/blogs')
+    const {data: blogs, isLoading, refetch} = useQuery('blogs', () => fetch('https://serene-sea-89981.herokuapp.com/blogs')
     .then(res => res.json())
     )
     if(isLoading){

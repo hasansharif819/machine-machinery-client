@@ -17,7 +17,7 @@ const Header = () => {
     const logout = () => {
         signOut(auth);
     }
-        const {data: carts, isLoading, refetch} = useQuery(['carts', email], () => fetch(`http://localhost:5000/mycart?email=${email}`).then(res => res.json()))
+        const {data: carts, isLoading, refetch} = useQuery(['carts', email], () => fetch(`https://serene-sea-89981.herokuapp.com/mycart?email=${email}`).then(res => res.json()))
         if(isLoading){
             return <Loading />
         }

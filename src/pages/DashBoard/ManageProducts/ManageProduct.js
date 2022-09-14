@@ -7,7 +7,7 @@ const ManageProduct = ({ product, refetch, index }) => {
         console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `http://localhost:5000/product/${product?._id}`;
+          const url = `https://serene-sea-89981.herokuapp.com/product/${product?._id}`;
           fetch(url, {
             method: "DELETE"
           })

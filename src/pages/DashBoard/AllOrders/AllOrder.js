@@ -6,7 +6,7 @@ const AllOrder = ({ order, refetch, index}) => {
 
     const shippingProduct = _id => {
       console.log('shipping', _id, order?._id)
-      fetch(`http://localhost:5000/payments/${order?._id}`, {
+      fetch(`https://serene-sea-89981.herokuapp.com/payments/${order?._id}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ const AllOrder = ({ order, refetch, index}) => {
         // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to cancel');
         if(proceed){
-          const url = `http://localhost:5000/order/${order?._id}`;
+          const url = `https://serene-sea-89981.herokuapp.com/order/${order?._id}`;
           fetch(url, {
             method: "DELETE"
           })

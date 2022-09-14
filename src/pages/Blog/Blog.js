@@ -18,7 +18,7 @@ const Blog = ({ blog, refetch }) => {
             comment: event.target.comment.value,
             blogId: blog._id
         }
-        fetch('http://localhost:5000/comment', {
+        fetch('https://serene-sea-89981.herokuapp.com/comment', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -36,7 +36,7 @@ const Blog = ({ blog, refetch }) => {
     //load comment
     const [comments, setComments] = useState([]);
     useEffect( () => {
-        fetch(`http://localhost:5000/comment/${blog._id}`)
+        fetch(`https://serene-sea-89981.herokuapp.com/comment/${blog._id}`)
     .then(res => res.json())
     .then(data => setComments(data))
     }, [user, blog, comments])

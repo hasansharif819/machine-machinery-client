@@ -14,12 +14,12 @@ const Purchase = () => {
     // console.log('user', user?.email)
     const [count, setCount] = useState(10);
     // useEffect( () => {
-    //     fetch(`http://localhost:5000/product/${purchaseID}`)
+    //     fetch(`https://serene-sea-89981.herokuapp.com/product/${purchaseID}`)
     //     .then(res => res.json())
     //     .then(data => setProduct(data))
     // }, [product, purchaseID])
 
-    const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`http://localhost:5000/product/${purchaseID}`).then(res => res.json()))
+    const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`https://serene-sea-89981.herokuapp.com/product/${purchaseID}`).then(res => res.json()))
     if(isLoading){
         return <Loading />
     }
@@ -31,12 +31,12 @@ const Purchase = () => {
         if(count < 11){
             return;
         }
-        setCount(prev - 10)
+        setCount(prev - 1)
     }
     const addCount = () => {
         const prev = parseInt(count)
         if(count < (maxQuantity - 10)){
-            setCount(prev + 10)
+            setCount(prev + 1)
         }
         else{
             return;
@@ -56,7 +56,7 @@ const Purchase = () => {
                 description: product.description,
                 img: product.img
             }
-        const url = `http://localhost:5000/cart`;
+        const url = `https://serene-sea-89981.herokuapp.com/cart`;
         fetch(url, {
             method: "POST",
             headers: {
@@ -89,7 +89,7 @@ const Purchase = () => {
                 total: total,
                 img: product.img
             }
-        const url = `http://localhost:5000/order`;
+        const url = `https://serene-sea-89981.herokuapp.com/order`;
         fetch(url, {
             method: "POST",
             headers: {
