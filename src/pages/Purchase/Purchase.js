@@ -12,7 +12,7 @@ const Purchase = () => {
     const [user] = useAuthState(auth);
     // console.log('userName', user?.displayName)
     // console.log('user', user?.email)
-    const [count, setCount] = useState(10);
+    const [count, setCount] = useState(1);
     // useEffect( () => {
     //     fetch(`https://serene-sea-89981.herokuapp.com/product/${purchaseID}`)
     //     .then(res => res.json())
@@ -28,14 +28,14 @@ const Purchase = () => {
     const maxQuantity = product.quantity;
     const reduceCount = () => {
         const prev = parseInt(count);
-        if(count < 11){
+        if(count < 1){
             return;
         }
         setCount(prev - 1)
     }
     const addCount = () => {
         const prev = parseInt(count)
-        if(count < (maxQuantity - 10)){
+        if(count < (maxQuantity - 1)){
             setCount(prev + 1)
         }
         else{
@@ -142,7 +142,7 @@ const Purchase = () => {
                 </div>
                 <div className='content2 p-5'>
                         <h2 className='text-center text-3xl font-bold mt-5'>{product.name}</h2>
-                        <h2 className='text-center text-2xl text-red-600 font-bold mt-5'>$ {product.price}</h2>
+                        <h2 className='text-center text-2xl text-red-600 font-bold mt-5'> {product.price} tk</h2>
                         <p className='my-2 text-start'>{product.description}</p>
                         <p className='text-green-400 text-start font-semibold'>In Stock {product.quantity} Items</p>
                         <p className='text-start py-5'>
@@ -153,7 +153,7 @@ const Purchase = () => {
                                  <span id='counterID'>
                                     <button onClick={addCount}>+</button>
                                     </span> 
-                                    <h2 className='text-2xl font-semibold text-green-600 my-5'>Grand total: ${total}</h2>
+                                    <h2 className='text-2xl font-semibold text-green-600 my-5'>Grand total: {total} tk</h2>
                                     <button className='btn btn-sm btn-secondary text-white uppercase bg-gradient-to-r from-orange-500 to-red-500 mr-5'
                                     onClick={() => addToCart(purchaseID)}
                                     >CART</button>
