@@ -30,7 +30,7 @@ const Payment = () => {
                 <div className="card-body">
                     <p className="text-success font-bold">Hello, {payment.name}</p>
                     <h2 className="card-title">Please Pay for {payment.productName}</h2>
-                    <p>Please pay: ${payment.total} USD</p>
+                    <p>Please pay: {payment.total} tk</p>
                 </div>
             </div>
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100 text-black h-40">
