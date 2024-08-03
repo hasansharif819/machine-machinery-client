@@ -14,12 +14,12 @@ const Purchase = () => {
     // console.log('user', user?.email)
     const [count, setCount] = useState(1);
     // useEffect( () => {
-    //     fetch(`http://localhost:5000/product/${purchaseID}`)
+    //     fetch(`https://hello-tools-server.vercel.app/product/${purchaseID}`)
     //     .then(res => res.json())
     //     .then(data => setProduct(data))
     // }, [product, purchaseID])
 
-    const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`http://localhost:5000/product/${purchaseID}`).then(res => res.json()))
+    const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`https://hello-tools-server.vercel.app/product/${purchaseID}`).then(res => res.json()))
     if(isLoading){
         return <Loading />
     }
@@ -56,7 +56,7 @@ const Purchase = () => {
                 description: product.description,
                 img: product.img
             }
-        const url = `http://localhost:5000/cart`;
+        const url = `https://hello-tools-server.vercel.app/cart`;
         fetch(url, {
             method: "POST",
             headers: {
@@ -89,7 +89,7 @@ const Purchase = () => {
                 total: total,
                 img: product.img
             }
-        const url = `http://localhost:5000/order`;
+        const url = `https://hello-tools-server.vercel.app/order`;
         fetch(url, {
             method: "POST",
             headers: {

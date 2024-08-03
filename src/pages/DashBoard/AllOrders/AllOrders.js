@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading/Loading';
 import AllOrder from './AllOrder';
 
 const AllOrders = () => {
-    const {data: orders, isLoading, refetch} = useQuery('orders', () => fetch('http://localhost:5000/order').then(res => res.json()))
+    const {data: orders, isLoading, refetch} = useQuery('orders', () => fetch('https://hello-tools-server.vercel.app/order').then(res => res.json()))
     if(isLoading){
         return <Loading />
     }

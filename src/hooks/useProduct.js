@@ -8,7 +8,7 @@ const useProduct = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:5000/product');
+                const response = await fetch('https://hello-tools-server.vercel.app/product');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

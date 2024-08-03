@@ -18,7 +18,7 @@ const Blog = ({ blog, refetch }) => {
             comment: event.target.comment.value,
             blogId: blog._id
         }
-        fetch('http://localhost:5000/comment', {
+        fetch('https://hello-tools-server.vercel.app/comment', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -36,7 +36,7 @@ const Blog = ({ blog, refetch }) => {
     //load comment
     const [comments, setComments] = useState([]);
     useEffect( () => {
-        fetch(`http://localhost:5000/comment/${blog._id}`)
+        fetch(`https://hello-tools-server.vercel.app/comment/${blog._id}`)
     .then(res => res.json())
     .then(data => setComments(data))
     }, [user, blog, comments])
