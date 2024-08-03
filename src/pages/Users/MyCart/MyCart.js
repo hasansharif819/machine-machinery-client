@@ -1,19 +1,18 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import auth from '../../../firebase.init';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useParams } from 'react-router-dom';
+// import auth from '../../../firebase.init';
 
 const MyCart = ({ cart, index, refetch}) => {
     const {productName, email, img, price, pQuantity} = cart;
-    const purchaseID = useParams();
-    const [user] = useAuthState(auth);
+    // const purchaseID = useParams();
+    // const [user] = useAuthState(auth);
 
     const deleteItem = _id => {
         // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `https://serene-sea-89981.herokuapp.com/cart/${cart?._id}`;
+          const url = `http://localhost:5000/cart/${cart?._id}`;
           fetch(url, {
             method: "DELETE"
           })

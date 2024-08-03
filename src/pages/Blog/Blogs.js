@@ -1,23 +1,32 @@
 import React from 'react';
-import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading/Loading';
 import Blog from './Blog';
+import useBlogs from '../../hooks/useBlogs';
 
 const Blogs = () => {
-    const {data: blogs, isLoading, refetch} = useQuery('blogs', () => fetch('https://serene-sea-89981.herokuapp.com/blogs')
-    .then(res => res.json())
-    )
-    if(isLoading){
-        return <Loading />
+    const { blogs, error, loading } = useBlogs();
+
+    if (loading) {
+        return <Loading />;
     }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    if (!blogs || blogs.length === 0) {
+        return <div>No blogs available</div>;
+    }
+
     return (
         <div>
             {
-                blogs.map(blog => <Blog
-                key={blog._id}
-                blog={blog}
-                refetch={refetch}
-                ></Blog>)
+                blogs.map(blog => (
+                    <Blog
+                        key={blog._id}
+                        blog={blog}
+                    />
+                ))
             }
         </div>
     );

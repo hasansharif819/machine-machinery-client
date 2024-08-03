@@ -30,7 +30,7 @@ const AddBlogs = () => {
                     docs: data.docs,
                     img: image
                 }
-                fetch('https://serene-sea-89981.herokuapp.com/blogs', {
+                fetch('http://localhost:5000/blogs', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

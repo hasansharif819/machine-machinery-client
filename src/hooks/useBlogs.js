@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
+import Loading from "../pages/Shared/Loading/Loading";
 
-const useProduct = () => {
-    const [products, setProducts] = useState([]);
+const useBlogs = () => {
+    const [blogs, setBlogs] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchProducts = async () => {
+        const fetchBlogs = async () => {
             try {
-                const response = await fetch('http://localhost:5000/product');
+                const response = await fetch('http://localhost:5000/blogs');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
-                setProducts(data);
+                setBlogs(data);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -21,10 +22,18 @@ const useProduct = () => {
             }
         };
 
-        fetchProducts();
+        fetchBlogs();
     }, []);
 
-    return [products, setProducts, error, loading];
+    if (loading) {
+        return <Loading />;
+    }
+
+    if (error) {
+        return <div>Error: {error.message}</div>;
+    }
+
+    return { blogs, error, loading };
 }
 
-export default useProduct;
+export default useBlogs;

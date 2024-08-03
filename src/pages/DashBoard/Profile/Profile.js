@@ -13,7 +13,7 @@ const Profile = () => {
   const [user] = useAuthState(auth);
   const email = user?.email;
 
-  const { data: users, isLoading } = useQuery('users', () => fetch(`https://serene-sea-89981.herokuapp.com/profile?email=${email}`).then(res => res.json()))
+  const { data: users, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/profile?email=${email}`).then(res => res.json()))
   if (isLoading) {
     return <Loading />
   }

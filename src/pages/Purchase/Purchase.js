@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
@@ -14,12 +14,12 @@ const Purchase = () => {
     // console.log('user', user?.email)
     const [count, setCount] = useState(1);
     // useEffect( () => {
-    //     fetch(`https://serene-sea-89981.herokuapp.com/product/${purchaseID}`)
+    //     fetch(`http://localhost:5000/product/${purchaseID}`)
     //     .then(res => res.json())
     //     .then(data => setProduct(data))
     // }, [product, purchaseID])
 
-    const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`https://serene-sea-89981.herokuapp.com/product/${purchaseID}`).then(res => res.json()))
+    const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`http://localhost:5000/product/${purchaseID}`).then(res => res.json()))
     if(isLoading){
         return <Loading />
     }
@@ -56,7 +56,7 @@ const Purchase = () => {
                 description: product.description,
                 img: product.img
             }
-        const url = `https://serene-sea-89981.herokuapp.com/cart`;
+        const url = `http://localhost:5000/cart`;
         fetch(url, {
             method: "POST",
             headers: {
@@ -89,7 +89,7 @@ const Purchase = () => {
                 total: total,
                 img: product.img
             }
-        const url = `https://serene-sea-89981.herokuapp.com/order`;
+        const url = `http://localhost:5000/order`;
         fetch(url, {
             method: "POST",
             headers: {

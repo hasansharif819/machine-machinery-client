@@ -18,7 +18,7 @@ const Blog = ({ blog, refetch }) => {
             comment: event.target.comment.value,
             blogId: blog._id
         }
-        fetch('https://serene-sea-89981.herokuapp.com/comment', {
+        fetch('http://localhost:5000/comment', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -36,7 +36,7 @@ const Blog = ({ blog, refetch }) => {
     //load comment
     const [comments, setComments] = useState([]);
     useEffect( () => {
-        fetch(`https://serene-sea-89981.herokuapp.com/comment/${blog._id}`)
+        fetch(`http://localhost:5000/comment/${blog._id}`)
     .then(res => res.json())
     .then(data => setComments(data))
     }, [user, blog, comments])
@@ -52,7 +52,7 @@ const Blog = ({ blog, refetch }) => {
                             <h2 className="card-title text-red-400">{name}</h2>
                             <p>{des}</p>
                             <div className="card-actions justify-center">
-                                <a href={docs} target='_blank'><button className="btn btn-sm bg-red-900">DETAILS</button>
+                                <a href={docs} target='_blank' without rel="noreferrer"><button className="btn btn-sm bg-red-900">DETAILS</button>
                                 </a>
                             </div>
                         </div>

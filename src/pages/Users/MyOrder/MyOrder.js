@@ -1,38 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 const MyOrder = ({ order, index, refetch }) => {
   const { productName, email, img, price, pQuantity } = order;
 
-  const makePayment = () => {
-    console.log('payment', email)
-    fetch(`https://serene-sea-89981.herokuapp.com/order/pay/${email}`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('accessToken')}`
-      }
-    })
-      .then(res => {
-        if (res.status === 403) {
-          toast.error('Failed to make payment')
-        }
-        return res.json()
-      })
-      .then(data => {
-        console.log('data', data)
-        if (data.modifiedCount > 0) {
-          toast.success('Payment Successfull');
-          refetch();
-        }
-      })
-  }
+  // const makePayment = () => {
+  //   console.log('payment', email)
+  //   fetch(`http://localhost:5000/order/pay/${email}`, {
+  //     method: "PUT",
+  //     headers: {
+  //       authorization: `Bearer ${localStorage.getItem('accessToken')}`
+  //     }
+  //   })
+  //     .then(res => {
+  //       if (res.status === 403) {
+  //         toast.error('Failed to make payment')
+  //       }
+  //       return res.json()
+  //     })
+  //     .then(data => {
+  //       console.log('data', data)
+  //       if (data.modifiedCount > 0) {
+  //         toast.success('Payment Successfull');
+  //         refetch();
+  //       }
+  //     })
+  // }
 
   const deleteItem = _id => {
     console.log('deleted', _id);
     const proceed = window.confirm('Are you sure to delete');
     if (proceed) {
-      const url = `https://serene-sea-89981.herokuapp.com/order/${order?._id}`;
+      const url = `http://localhost:5000/order/${order?._id}`;
       fetch(url, {
         method: "DELETE"
       })

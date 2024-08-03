@@ -8,10 +8,10 @@ import Loading from '../../Shared/Loading/Loading';
 
 const UpdateProfile = () => {
     const [user] = useAuthState(auth);
-    const { register, formState: { errors }, reset, handleSubmit } = useForm();
+    const { register, reset, handleSubmit } = useForm();
 
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://serene-sea-89981.herokuapp.com/profile?email=${user?.email}`).then(res => res.json()))
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/profile?email=${user?.email}`).then(res => res.json()))
     if (isLoading) {
         return <Loading />
     }
@@ -21,7 +21,7 @@ const UpdateProfile = () => {
         const name = {
             name: data.name,
         }
-        const url = `https://serene-sea-89981.herokuapp.com/user/${users.email}`
+        const url = `http://localhost:5000/user/${users.email}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -39,7 +39,7 @@ const UpdateProfile = () => {
         const address = {
             address: data.address,
         }
-        const url = `https://serene-sea-89981.herokuapp.com/user/${users.email}`
+        const url = `http://localhost:5000/user/${users.email}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -55,7 +55,7 @@ const UpdateProfile = () => {
         const education = {
             education: data.education,
         }
-        const url = `https://serene-sea-89981.herokuapp.com/user/${users.email}`
+        const url = `http://localhost:5000/user/${users.email}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -74,7 +74,7 @@ const UpdateProfile = () => {
         const age = {
             age: data.age,
         }
-        const url = `https://serene-sea-89981.herokuapp.com/user/${users.email}`
+        const url = `http://localhost:5000/user/${users.email}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -93,7 +93,7 @@ const UpdateProfile = () => {
         const gender = {
             gender: data.gender,
         }
-        const url = `https://serene-sea-89981.herokuapp.com/user/${users.email}`
+        const url = `http://localhost:5000/user/${users.email}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -125,7 +125,7 @@ const UpdateProfile = () => {
                         img1: image
                     }
 
-                    fetch(`https://serene-sea-89981.herokuapp.com/user/${users.email}`, {
+                    fetch(`http://localhost:5000/user/${users.email}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
@@ -165,7 +165,7 @@ const updateCoverPic = async data => {
                     img2: image
                 }
 console.log(image)
-                fetch(`https://serene-sea-89981.herokuapp.com/user/${users.email}`, {
+                fetch(`http://localhost:5000/user/${users.email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

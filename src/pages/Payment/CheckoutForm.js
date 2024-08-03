@@ -7,14 +7,14 @@ const CheckoutForm = ({ payment }) => {
     const elements = useElements();
     const [cardError, setCardError] = useState('');
     const [success, setSuccess] = useState('');
-    const [processing, setProcessing] = useState(false);
+    const [ setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
     const { _id, total, email, name } = payment;
 
     useEffect(() => {
-        fetch('https://serene-sea-89981.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -43,7 +43,7 @@ const CheckoutForm = ({ payment }) => {
             return;
         }
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
+        const { error } = await stripe.createPaymentMethod({
             type: 'card',
             card
         });
@@ -80,7 +80,7 @@ const CheckoutForm = ({ payment }) => {
                 payment: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://serene-sea-89981.herokuapp.com/order/${_id}`, {
+            fetch(`http://localhost:5000/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

@@ -1,3 +1,25 @@
-/* #navHeader{
-    background-image: url('https://i.ibb.co/wcjSQ6c/chilly1.webp');
-} */
+.navbar-nav-none {
+    display: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1023px) {
+    #navHeader {
+        margin-bottom: 30px;
+        max-height: 80px;
+    }
+
+    .dropdown-link {
+        font-size: 20px;
+        line-height: 20px;
+        text-wrap: nowrap;
+    }
+
+    .navbar-start {
+        margin-left: 10px;
+    }
+    .navbar-end {
+        margin-right: 20px;
+        margin-left: auto;
+        width: auto;
+    }
+}

@@ -7,7 +7,7 @@ import MyCart from './MyCart';
 
 const MyCarts = () => {
     const [user] = useAuthState(auth);    
-        const {data: carts, isLoading, refetch} = useQuery('carts', () => fetch(`https://serene-sea-89981.herokuapp.com/mycart?email=${user?.email}`).then(res => res.json()))
+        const {data: carts, isLoading, refetch} = useQuery('carts', () => fetch(`http://localhost:5000/mycart?email=${user?.email}`).then(res => res.json()))
         if(isLoading){
             return <Loading />
         }

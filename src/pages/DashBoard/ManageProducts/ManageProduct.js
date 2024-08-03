@@ -1,13 +1,13 @@
 import React from 'react';
 
 const ManageProduct = ({ product, refetch, index }) => {
-    const { name, price, quantity, img, email} = product;
+    const { name, price, quantity, img} = product;
 
     const deleteItem = _id => {
         // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `https://serene-sea-89981.herokuapp.com/product/${product?._id}`;
+          const url = `http://localhost:5000/product/${product?._id}`;
           fetch(url, {
             method: "DELETE"
           })

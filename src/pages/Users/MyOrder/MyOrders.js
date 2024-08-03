@@ -7,7 +7,7 @@ import MyOrder from './MyOrder';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);    
-        const {data: orders, isLoading, refetch} = useQuery('orders', () => fetch(`https://serene-sea-89981.herokuapp.com/myorder?email=${user?.email}`).then(res => res.json()))
+        const {data: orders, isLoading, refetch} = useQuery('orders', () => fetch(`http://localhost:5000/myorder?email=${user?.email}`).then(res => res.json()))
         if(isLoading){
             return <Loading />
         }
