@@ -35,7 +35,7 @@ const Header = () => {
     </>
     return (
         <div>
-            <div className='navbar font-bold text-black sticky' id='navHeader'>
+            <div className='navbar font-bold text-black sticky text-white' id='navHeader'>
                 <div className='navbar-start ml-[140px]'>
                     <div className='dropdown'>
                         <label tabIndex='0' className='btn btn-ghost lg:hidden'>
@@ -93,16 +93,14 @@ const Header = () => {
 
                                 </div>
                             </label>
-                            <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 text-white">
-                                <li>
+                            <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 text-white bg-base-100">
+                                {/* <li>
                                     <button className='btn bg-gray-400'>
-                                        <h2>
-                                            {user?.displayName ? user.displayName : 'User name'}
-                                            </h2>
+                                        
                                     </button>
-                                </li>
+                                </li> */}
                                 <li>
-                                    <Link to='/profile'><button className='btn bg-gray-400 w-full text-white'>PROFILE</button></Link>
+                                    <Link to='/profile'><button className='btn bg-gray-400 w-full text-white'>{user?.displayName ? user.displayName : 'User name'}</button></Link>
                                 </li>
                                 
                                 <li>
@@ -113,7 +111,7 @@ const Header = () => {
                                     {!admin && <Link to='/myreview'><button className='btn bg-gray-400 w-full text-white'>REVIEW</button></Link>}
                                 </li>
                                 <li>
-                                    <button className='btn bg-gray-400 text-white' onClick={logout}>Logout</button>
+                                <Link to='/login'><button className='btn bg-gray-400 text-white w-[100%]' onClick={logout}>Logout</button></Link>
                                 </li>
 
                             </ul>
