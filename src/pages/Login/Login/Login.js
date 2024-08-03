@@ -17,12 +17,12 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [token] = useToken(user || gUser || fUser);
 
     let signInError;
     const emailRef = useRef('');
-    const passwordRef = useRef('');
+    // const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";

@@ -8,10 +8,7 @@ const Product = ({ product }) => {
     const navigateToDetail = _id => {
         navigate(`/products/${_id}`)
     }
-
-    const handleClick= () => {
-      console.log('clicked')
-    }
+    
     return (
         <div className="card w-96 glass cardBody">
   <figure>

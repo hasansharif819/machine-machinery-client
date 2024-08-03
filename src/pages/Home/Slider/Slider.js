@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import b1 from '../../../assets/Banner/b1.jpg';
 import b2 from '../../../assets/Banner/b2.jpg';
 import b3 from '../../../assets/Banner/b3.jpg';
-import b4 from '../../../assets/Banner/b4.jpg';
-import b5 from '../../../assets/Banner/b5.jpg';
-import b6 from '../../../assets/Banner/b6.jpg';
-import b7 from '../../../assets/Banner/b7.jpg';
 import b9 from '../../../assets/Banner/b9.jpg';
 import './Slider.css';
 
