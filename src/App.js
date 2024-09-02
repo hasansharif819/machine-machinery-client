@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div className='main-content'>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/products' element={<Products />}></Route>
@@ -71,6 +72,7 @@ function App() {
         </Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
+      </div>
 
       <Footer />
       <ToastContainer />

@@ -11,7 +11,7 @@ const BannerProducts = () => {
     }
 
     return (
-        <div className='mt-5 bg-base-300'>
+        <div className='bg-base-300 py-[50px]'>
              <div>
             <h2 className='title font-bold text-4xl py-2 text-orange-400'>HELLO TOOLS</h2>
             <h2 className='title font-bold text-3xl py-2 text-orange-400'>LATEST FROM INVENTORY</h2>

@@ -19,7 +19,7 @@ const Blogs = () => {
     }
 
     return (
-        <div className='bg-gray-900 pt-[100px] pb-[50px]'>
+        <div className='bg-gray-900 py-[50px]'>
             <h2 className='title font-bold text-4xl py-2 text-orange-400 pb-10'>Blogs</h2>
             {
                 blogs?.map(blog => (
