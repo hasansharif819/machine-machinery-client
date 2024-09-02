@@ -27,6 +27,10 @@
     color: antiquewhite;
 }
 
+.card-body {
+    background: transparent !important;
+}
+
 #comment_user{
     margin-top: 10px;
     display: flex;
