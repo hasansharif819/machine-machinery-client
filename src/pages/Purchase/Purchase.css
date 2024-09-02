@@ -6,7 +6,8 @@
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    margin: 0 auto;
 }
 
 .content1{

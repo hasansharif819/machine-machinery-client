@@ -2,3 +2,65 @@
     max-width: 300px;
     margin-left: 0;
 }
+
+.react-multi-carousel-track {
+    padding-left: 70px !important;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(0% + 1px) !important;
+}
+
+.react-multiple-carousel__arrow--right {
+    right: calc(0% + 1px) !important;
+}
+
+/* review */
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.text-gold {
+    color: #FFD700;
+}
+
+.card-body {
+    background: linear-gradient(145deg, #374151, #4b5563);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #f3f4f6;
+}
+
+.text-start {
+    color: #d1d5db;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+img.rounded-full {
+    border-radius: 9999px;
+}
+
+.w-12 {
+    width: 3rem; /* 48px */
+}
+
+.h-12 {
+    height: 3rem; /* 48px */
+}
+
+.mr-4 {
+    margin-right: 1rem;
+}

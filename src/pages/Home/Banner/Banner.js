@@ -11,10 +11,10 @@ import b8 from '../../../assets/Banner/b8.jpg';
 
 const Banner = () => {
     return (
-        <div className='bg-base-300 my-5 py-5'>
+        <div className='bg-base-300 py-10'>
             <div >
         <h2 className='title font-bold text-4xl py-2 text-orange-400'>HELLO TOOLS</h2>
-        <h2 className='title font-bold text-3xl py-2 text-orange-400'>TOP SELLING PRODUCTS</h2>
+        <h2 className='title font-bold text-3xl py-2 text-orange-400 mb-10'>TOP SELLING PRODUCTS</h2>
         </div>
             <div className='outer'>
                 <div className="hero min-h-screen" id='background'>

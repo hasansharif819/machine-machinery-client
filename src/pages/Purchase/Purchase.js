@@ -10,22 +10,14 @@ import './Purchase.css';
 const Purchase = () => {
     const { purchaseID} = useParams();
     const [user] = useAuthState(auth);
-    // console.log('userName', user?.displayName)
-    // console.log('user', user?.email)
     const [count, setCount] = useState(1);
-    // useEffect( () => {
-    //     fetch(`https://hello-tools-server.vercel.app/product/${purchaseID}`)
-    //     .then(res => res.json())
-    //     .then(data => setProduct(data))
-    // }, [product, purchaseID])
 
     const {data: product, refetch, isLoading} = useQuery('product', () => fetch(`https://hello-tools-server.vercel.app/product/${purchaseID}`).then(res => res.json()))
     if(isLoading){
         return <Loading />
     }
 
-    // const [count, setCount] = useState(10)
-    const maxQuantity = product.quantity;
+    const maxQuantity = product?.quantity;
     const reduceCount = () => {
         const prev = parseInt(count);
         if(count < 1){

@@ -1,9 +1,15 @@
 import React from 'react';
 import useProduct from '../../../hooks/useProduct';
 import BannerProduct from './BannerProduct';
+import Loading from '../../Shared/Loading/Loading';
 
 const BannerProducts = () => {
-    const [products] = useProduct([]);
+    const [products, loading] = useProduct([]);
+    
+    if(loading){
+        <Loading />
+    }
+
     return (
         <div className='mt-5 bg-base-300'>
              <div>
@@ -13,7 +19,7 @@ const BannerProducts = () => {
             </div>
                 <div className='grid grid-cols-1md:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 mt-5 p-5'>
                     {
-                        products.slice(0, 6).map(product => <BannerProduct
+                        products?.slice(0, 6).map(product => <BannerProduct
                             key={product._id}
                             product={product}
                         ></BannerProduct>)
