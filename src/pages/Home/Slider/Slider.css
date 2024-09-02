@@ -3,14 +3,17 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
-    /* margin-bottom: 20px; */
 }
-.large{
-    overflow: hidden;
+.hero{
+    background-image: url('/src/assets/Banner/b6.jpg');
     background-color: aqua;
     border-radius: 20px;
-    background-image: url('/src/assets/Banner/b6.jpg');
-    /* background-size: cover; */
+    min-height: 40vh;
+    overflow: hidden;
+}
+
+.inner2 img, .inner3 img, .inner4 img {
+    height: auto;
 }
 
 #largeImage{
@@ -35,6 +38,7 @@
 .small{
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow: hidden;
     gap: 10;
 }

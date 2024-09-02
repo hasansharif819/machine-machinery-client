@@ -2,9 +2,7 @@
     background-color: black;
 }
 
-.footer-wrapper{
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr); */
+.footer-wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -14,13 +12,13 @@
 }
 
 @media only screen and (max-width: 400px) {
-    #footer{
+    .footer-wrapper {
         display: flex;
         flex-direction: column;
     }
 }
 @media only screen and (min-width: 401px) and (max-width: 800px) {
-    #footer{
+    .footer-wrapper {
         display: flex;
         flex-direction: column;
     }
