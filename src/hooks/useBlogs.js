@@ -9,12 +9,12 @@ const useBlogs = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch('https://hello-tools-server.vercel.app/blogs');
+                const response = await fetch('https://hello-tools-updated-server.vercel.app/api/v1/blogs');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
-                setBlogs(data);
+                setBlogs(data.data);
             } catch (error) {
                 setError(error.message);
             } finally {

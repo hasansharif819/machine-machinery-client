@@ -10,12 +10,12 @@ const Reviews = () => {
     useEffect(() => {
         const fetchReviews = async () => {
             try {
-                const response = await fetch('https://hello-tools-server.vercel.app/review');
+                const response = await fetch('https://hello-tools-updated-server.vercel.app/api/v1/reviews');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                setReviews(data);
+                setReviews(data.data);
             } catch (error) {
                 setError(error.message);
             }

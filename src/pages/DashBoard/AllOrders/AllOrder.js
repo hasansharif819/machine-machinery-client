@@ -6,7 +6,7 @@ const AllOrder = ({ order, refetch, index}) => {
 
     const shippingProduct = _id => {
       console.log('shipping', _id, order?._id)
-      fetch(`https://hello-tools-server.vercel.app/payments/${order?._id}`, {
+      fetch(`https://hello-tools-updated-server.vercel.app/api/v1/payments/${order?._id}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ const AllOrder = ({ order, refetch, index}) => {
         // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to cancel');
         if(proceed){
-          const url = `https://hello-tools-server.vercel.app/order/${order?._id}`;
+          const url = `https://hello-tools-updated-server.vercel.app/api/v1/order/${order?._id}`;
           fetch(url, {
             method: "DELETE"
           })

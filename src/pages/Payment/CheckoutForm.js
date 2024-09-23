@@ -14,7 +14,7 @@ const CheckoutForm = ({ payment }) => {
     const { _id, total, email, name } = payment;
 
     useEffect(() => {
-        fetch('https://hello-tools-server.vercel.app/create-payment-intent', {
+        fetch('https://hello-tools-updated-server.vercel.app/api/v1/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -80,7 +80,7 @@ const CheckoutForm = ({ payment }) => {
                 payment: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://hello-tools-server.vercel.app/order/${_id}`, {
+            fetch(`https://hello-tools-updated-server.vercel.app/api/v1/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

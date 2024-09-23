@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading/Loading';
 import ManageProduct from './ManageProduct';
 
 const ManageProducts = () => {
-    const {data: products, isLoading, refetch} = useQuery('products', () => fetch('https://hello-tools-server.vercel.app/product').then(res => res.json()))
+    const {data: products, isLoading, refetch} = useQuery('products', () => fetch('https://hello-tools-updated-server.vercel.app/api/v1/product').then(res => res.json()))
 if(isLoading){
     return <Loading></Loading>
 }

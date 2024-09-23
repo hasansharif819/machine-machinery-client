@@ -13,7 +13,7 @@ const Profile = () => {
   const [user] = useAuthState(auth);
   const email = user?.email;
 
-  const { data: users, isLoading } = useQuery('users', () => fetch(`https://hello-tools-server.vercel.app/profile?email=${email}`).then(res => res.json()))
+  const { data: users, isLoading } = useQuery('users', () => fetch(`https://hello-tools-updated-server.vercel.app/api/v1/profile?email=${email}`).then(res => res.json()))
   if (isLoading) {
     return <Loading />
   }

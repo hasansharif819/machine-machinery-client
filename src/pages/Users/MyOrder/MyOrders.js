@@ -7,7 +7,7 @@ import MyOrder from './MyOrder';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);    
-        const {data: orders, isLoading, refetch} = useQuery('orders', () => fetch(`https://hello-tools-server.vercel.app/myorder?email=${user?.email}`).then(res => res.json()))
+        const {data: orders, isLoading, refetch} = useQuery('orders', () => fetch(`https://hello-tools-updated-server.vercel.app/api/v1/myorder?email=${user?.email}`).then(res => res.json()))
         if(isLoading){
             return <Loading />
         }

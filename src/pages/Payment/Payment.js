@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51K1UzIKF2cz5jJ6Iazi1XrzfOhiJObabhFYTO
 
 const Payment = () => {
     const { paymentID } = useParams();
-    const url = `https://hello-tools-server.vercel.app/order/${paymentID}`;
+    const url = `https://hello-tools-updated-server.vercel.app/api/v1/order/${paymentID}`;
 
     const { data: payment, isLoading } = useQuery(['order', paymentID], () => fetch(url, {
         method: 'GET',

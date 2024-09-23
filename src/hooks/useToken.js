@@ -8,7 +8,7 @@ const useToken = user => {
         // const currentUser = {email: email}
         const currentUser = {user: user};
         if(email){
-        fetch(`https://hello-tools-server.vercel.app/user/${email}`, {
+        fetch(`https://hello-tools-updated-server.vercel.app/api/v1/user/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

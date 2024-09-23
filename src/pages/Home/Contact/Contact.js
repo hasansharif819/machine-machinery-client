@@ -17,7 +17,7 @@ const Contact = () => {
             contact: data.contact,
             message: data.message,
         }
-        fetch('https://hello-tools-server.vercel.app/message', {
+        fetch('https://hello-tools-updated-server.vercel.app/api/v1/message', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

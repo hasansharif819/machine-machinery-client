@@ -12,7 +12,7 @@ const MyCart = ({ cart, index, refetch}) => {
         // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `https://hello-tools-server.vercel.app/cart/${cart?._id}`;
+          const url = `https://hello-tools-updated-server.vercel.app/api/v1/cart/${cart?._id}`;
           fetch(url, {
             method: "DELETE"
           })

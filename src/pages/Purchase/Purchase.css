@@ -11,12 +11,12 @@
 }
 
 .content1{
-    border: 1px solid red;
-    height: 80vh;
+    /* border: 1px solid red; */
+    height: auto;
 }
 .content2{
-    border: 1px solid blue;
-    height: 80vh;
+    /* border: 1px solid blue; */
+    height: auto;
     overflow: hidden;
     /* margin-top: 100px; */
 }
@@ -43,7 +43,7 @@
     height: 200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
+    grid-gap: 24px;
     overflow: hidden;
 }
 

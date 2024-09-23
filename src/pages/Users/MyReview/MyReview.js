@@ -19,7 +19,7 @@ const MyReview = () => {
             ratings: data.ratings,
             review: data.review,
         }
-        fetch('https://hello-tools-server.vercel.app/review', {
+        fetch('https://hello-tools-updated-server.vercel.app/api/v1/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const ManageProduct = ({ product, refetch, index }) => {
         // console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `https://hello-tools-server.vercel.app/product/${product?._id}`;
+          const url = `https://hello-tools-updated-server.vercel.app/api/v1/product/${product?._id}`;
           fetch(url, {
             method: "DELETE"
           })

@@ -31,7 +31,7 @@ const AddProducts = () => {
                     description: data.description,
                     img: image
                 }
-                fetch('https://hello-tools-server.vercel.app/product', {
+                fetch('https://hello-tools-updated-server.vercel.app/api/v1/product', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

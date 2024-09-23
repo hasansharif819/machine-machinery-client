@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading/Loading';
 import AllUser from './AllUser';
 
 const AllUsers = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://hello-tools-server.vercel.app/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://hello-tools-updated-server.vercel.app/api/v1/user', {
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

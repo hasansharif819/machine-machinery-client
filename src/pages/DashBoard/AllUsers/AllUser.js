@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const AllUser = ({ user, refetch, index }) => {
     const { email, role } = user;
     const makeAdmin = () => {
-        fetch(`https://hello-tools-server.vercel.app/user/admin/${email}`, {
+        fetch(`https://hello-tools-updated-server.vercel.app/api/v1/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const AllUser = ({ user, refetch, index }) => {
         console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `https://hello-tools-server.vercel.app/user/${user?._id}`;
+          const url = `https://hello-tools-updated-server.vercel.app/api/v1/user/${user?._id}`;
           fetch(url, {
             method: "DELETE"
           })

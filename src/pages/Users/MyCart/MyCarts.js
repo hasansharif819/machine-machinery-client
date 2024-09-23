@@ -7,7 +7,7 @@ import MyCart from './MyCart';
 
 const MyCarts = () => {
     const [user] = useAuthState(auth);    
-        const {data: carts, isLoading, refetch} = useQuery('carts', () => fetch(`https://hello-tools-server.vercel.app/mycart?email=${user?.email}`).then(res => res.json()))
+        const {data: carts, isLoading, refetch} = useQuery('carts', () => fetch(`https://hello-tools-updated-server.vercel.app/api/v1/mycart?email=${user?.email}`).then(res => res.json()))
         if(isLoading){
             return <Loading />
         }

@@ -8,38 +8,58 @@ const Blog = ({ blog, refetch }) => {
     const {name, des, img, docs} = blog;
     const [user] = useAuthState(auth);
 
-    const handleComment = event => {
+
+    const handleComment = async event => {
         event.preventDefault();
-
-        const comment = {
-            email: user.email,
-            name: user.displayName,
-            img: user.photoURL,
-            comment: event.target.comment.value,
-            blogId: blog._id
+    
+        if (!user) {
+            alert("You need to be logged in to comment.");
+            return;
         }
-        fetch('https://hello-tools-server.vercel.app/comment', {
-            method: "POST",
-            headers: {
-                'content-type': "application/json"
-            },
-            body: JSON.stringify(comment)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if(data.success === true){
-                    event.target.reset();
-                }
-            })
-    }
-
+    
+        try {
+            const token = await user.getIdToken();
+    
+            const comment = {
+                email: user?.email,
+            name: user?.displayName,
+            img: user?.photoURL,
+                comment: event.target.comment.value,
+                blogId: blog._id
+            };
+    
+            // console.log("Comment being sent: ", comment);
+    
+            const response = await fetch('https://hello-tools-updated-server.vercel.app/api/v1/comments/create-comment', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify(comment)
+            });
+    
+            const data = await response.json();
+            // console.log("Response data: ", data);
+    
+            if (data.success === true) {
+                event.target.reset();
+            } else {
+                console.error("Failed to submit comment: ", data.message);
+            }
+        } catch (error) {
+            console.error("Error occurred: ", error);
+        }
+    };
+    
     //load comment
     const [comments, setComments] = useState([]);
     useEffect( () => {
-        fetch(`https://hello-tools-server.vercel.app/comment/${blog._id}`)
+        fetch(`https://hello-tools-updated-server.vercel.app/api/v1/comments/blog/${blog._id}`)
     .then(res => res.json())
-    .then(data => setComments(data))
+    .then(data => setComments(data.data))
     }, [user, blog, comments])
+
     return (
         <div>
             <div className='outerBlog bg-gray-900'>

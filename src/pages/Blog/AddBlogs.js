@@ -30,7 +30,7 @@ const AddBlogs = () => {
                     docs: data.docs,
                     img: image
                 }
-                fetch('https://hello-tools-server.vercel.app/blogs', {
+                fetch('https://hello-tools-updated-server.vercel.app/api/v1/blogs', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
